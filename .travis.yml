@@ -1,0 +1,17 @@
+language: python
+python:
+  - 3.6
+addons:
+  apt:
+    update: true
+install:
+  - pip install -q -r requirements-dev.txt codecov
+before_script:
+#  - psql -c "CREATE DATABASE testdb;" -U postgres
+  - python manage.py migrate --noinput
+#  - python manage.py collectstatic --noinput
+script:
+  - flake8 .
+  - pytest --cov=zeus
+after_success:
+  - codecov
