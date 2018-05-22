@@ -7,7 +7,7 @@ addons:
 install:
   - pip install -q -r requirements-dev.txt codecov
 before_script:
-#  - psql -c "CREATE DATABASE testdb;" -U postgres
+  - psql -c "CREATE DATABASE testdb;" -U postgres
   - python manage.py migrate --noinput
 #  - python manage.py collectstatic --noinput
 script:
