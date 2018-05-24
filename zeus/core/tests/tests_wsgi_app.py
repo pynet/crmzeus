@@ -1,8 +1,7 @@
 import os
 
-from django.core.handlers.wsgi import WSGIHandler
-
 from zeus.wsgi import application
+from raven.contrib.django.raven_compat.middleware.wsgi import Sentry
 
 
 def test_wsgi_default_settings():
@@ -10,4 +9,4 @@ def test_wsgi_default_settings():
 
 
 def test_application_instace():
-    assert isinstance(application, WSGIHandler)
+    assert isinstance(application, Sentry)
