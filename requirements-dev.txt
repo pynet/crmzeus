@@ -15,7 +15,7 @@ pyflakes==2.0.0
 
 #AWS dependencies
 botocore==1.10.24
-boto3==1.7.24
+boto3==1.7.26
 Collectfast==0.6.2
 django-s3-folder-storage==0.5
 django-storages==1.6.6
