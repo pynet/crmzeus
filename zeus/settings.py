@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'collectfast',
     'django.contrib.staticfiles',
     'zeus.core',
 ]
@@ -169,6 +170,7 @@ COLLECTFAST_ENABLED = False
 AWS_ACCESS_KEY_ID = config('DJANGO_AWS_ACCESS_KEY_ID')
 
 if AWS_ACCESS_KEY_ID:
+    COLLECTFAST_ENABLED = True
     INSTALLED_APPS.append('storages'),
     INSTALLED_APPS.append('s3_folder_storage', )
 
@@ -176,7 +178,7 @@ if AWS_ACCESS_KEY_ID:
     AWS_STORAGE_BUCKET_NAME = config('DJANGO_AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
     AWS_PRELOAD_METADATA = True
-    AWS_AUTO_CREATE_BUCKET = True
+    AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = False
 
     # AWS cache settings, don't change unless you know what you're doing:
@@ -201,4 +203,3 @@ if AWS_ACCESS_KEY_ID:
     ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
 # ------------------------------------------------------------------------------
-
