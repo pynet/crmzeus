@@ -1,0 +1,48 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>{% block title %}CRM Zeus{% endblock title %}</title>
+</head>
+<body>
+    <nav class="navbar is-primary">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="#" class="navbar-item" style="font-weight: bold;">CRM Zeus</a>
+                <span class="navbar-burger burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#" class="navbar-item">Home</a>
+                    <a href="#" class="navbar-item">Resumos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>CRM Zeus</strong> by
+                    <a href="https://github.com/pynet/crmzeus">Renzo Nuccitelli & Vicente Marçal</a>.
+                    The source code is licensed <a href="https://github.com/pynet/crmzeus/blob/master/LICENSE">AGPL-3</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}></script>
+</body>
+</html>
