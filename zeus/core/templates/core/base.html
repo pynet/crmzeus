@@ -12,7 +12,7 @@
     <nav class="navbar is-primary">
         <div class="container">
             <div class="navbar-brand">
-                <a href="#" class="navbar-item" style="font-weight: bold;">CRM Zeus</a>
+                <a href="{% url 'home' %}" class="navbar-item" style="font-weight: bold;">CRM Zeus</a>
                 <span class="navbar-burger burger" data-target="navMenu">
                     <span></span>
                     <span></span>
@@ -22,8 +22,8 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-end">
-                    <a href="#" class="navbar-item">Home</a>
-                    <a href="#" class="navbar-item">Resumos</a>
+                    <a href="{% url 'home' %}" class="navbar-item">Home</a>
+                    <a href="{% url 'reports' %}" class="navbar-item">Relatórios</a>
                 </div>
             </div>
         </div>
