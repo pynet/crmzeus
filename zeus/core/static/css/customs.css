@@ -1,0 +1,15 @@
+table.table.mytable th {
+    text-align: center;
+}
+
+table.table.mytable td {
+    text-align: right;
+}
+
+h1.title.myheader {
+    text-align: center;
+}
+
+td.mytable {
+    text-align: left !important;
+}

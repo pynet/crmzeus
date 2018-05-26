@@ -1,10 +1,11 @@
-{% load static from staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <link rel="stylesheet" href="{% static 'css/customs.css' %}" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <title>{% block title %}CRM Zeus{% endblock title %}</title>
 </head>
@@ -14,7 +15,6 @@
             <div class="navbar-brand">
                 <a href="{% url 'home' %}" class="navbar-item" style="font-weight: bold;">CRM Zeus</a>
                 <span class="navbar-burger burger" data-target="navMenu">
-                    <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -42,6 +42,6 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="{% static 'js/scripts.js' %}></script>
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
