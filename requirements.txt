@@ -8,7 +8,7 @@ raven==6.8.0
 
 #AWS dependencies
 botocore==1.10.29
-boto3==1.7.29
+boto3==1.14.39
 Collectfast==0.6.2
 django-s3-folder-storage==0.5
 django-storages==1.6.6
